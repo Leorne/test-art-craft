@@ -1,0 +1,34 @@
+{
+    "name": "leorne/air-craft-test",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Leorne",
+            "email": "leorneq@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "src/Framework/",
+            "App\\": "/App",
+            "Models\\": "App/Http/Models"
+        },
+        "classmap": [
+            "App"
+        ]
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "illuminate/database": "^7.0@dev",
+        "symfony/http-foundation": "^5.0@dev",
+        "symfony/routing": "^5.0@dev",
+        "symfony/http-kernel": "^5.0@dev",
+        "twig/twig": "3.x-dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5@dev"
+    },
+    "scripts": {
+        "server": "php -S 0.0.0.0:8080 -t public public/index.php"
+    }
+}
