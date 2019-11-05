@@ -1,4 +1,4 @@
 /vendor
 .idea
-!/uploads/default.png
 /uploads/*
+!/uploads/default.png
