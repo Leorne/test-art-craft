@@ -6,12 +6,18 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App\\Http\\Controllers\\AbstractController' => $baseDir . '/App/Http/Controllers/AbstractController.php',
+    'App\\Helpers\\Auth' => $baseDir . '/App/Helpers/Auth.php',
+    'App\\Helpers\\Csrf' => $baseDir . '/App/Helpers/Csrf.php',
+    'App\\Helpers\\Validator' => $baseDir . '/App/Helpers/Validator.php',
+    'App\\Http\\Controllers\\Api\\UserApiController' => $baseDir . '/App/Http/Controllers/Api/UserApiController.php',
+    'App\\Http\\Controllers\\Controller' => $baseDir . '/App/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\UserController' => $baseDir . '/App/Http/Controllers/UserController.php',
     'App\\Http\\Models\\User' => $baseDir . '/App/Http/Models/User.php',
-    'App\\Http\\api\\Controller\\UserApiController' => $baseDir . '/App/Http/Controllers/api/UserApiController.php',
     'App\\Kernel' => $baseDir . '/App/Kernel.php',
-    'App\\RouterHelper' => $baseDir . '/App/Router.php',
+    'App\\Middleware\\Auth' => $baseDir . '/App/Middleware/Auth.php',
+    'App\\Middleware\\CsrfToken' => $baseDir . '/App/Middleware/CsrfToken.php',
+    'App\\Middleware\\Middleware' => $baseDir . '/App/Middleware/Middleware.php',
+    'App\\Services\\Db' => $baseDir . '/App/Services/Db.php',
     'JsonException' => $vendorDir . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
     'PHPUnit\\Exception' => $vendorDir . '/phpunit/phpunit/src/Exception.php',
     'PHPUnit\\Framework\\Assert' => $vendorDir . '/phpunit/phpunit/src/Framework/Assert.php',

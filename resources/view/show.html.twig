@@ -1,0 +1,25 @@
+{% extends 'app.html.twig' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-5">
+                <div class="card-header">
+                    <div>
+                        Name: {{ user['name']|join }}
+                    </div>
+                    <div>
+                        Email: {{ user.email }}
+                    </div>
+                    <div>
+                        Key: {{ user.key }}
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img class="img-fluid border-dark" src="uploads/{{ user.photo }}" height="200" width="200"
+                         alt="/uploads/default.png">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

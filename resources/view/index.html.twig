@@ -1,0 +1,40 @@
+{% extends 'app.html.twig' %}
+
+{% block content %}
+    <div class="container">
+       {% if auth.isAuth() %}
+           <div class="row justify-content-center">
+               <div class="card col-8 m-0">
+                   <form action="/register" method="GET">
+                       <div class="row justify-content-between">
+                           <div class="col-6 p-0 border">
+                               <a class="btn container-fluid btn-link" href="?sort=name&order={{ nameOrder }}">Name</a>
+                           </div>
+                           <div class="col-6 p-0 border">
+                               <a class="btn container-fluid btn-link" href="?sort=email&order={{ emailOrder }}">Email</a>
+                           </div>
+                       </div>
+                   </form>
+               </div>
+               <div class="card m-0 col-8">
+                   {%  for user in users %}
+                       <div class="row justify-content-between">
+                           <div class="col-6 border">
+                               <a href="/{{ user.key }}">{{ user.name }}</a>
+                           </div>
+                           <div class="col-6 border">
+                               {{ user.email }}
+                           </div>
+                       </div>
+                   {% endfor %}
+               </div>
+           </div>
+        {% else %}
+            <div class="text-center">
+                <h1>
+                    Please register to view users.
+                </h1>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

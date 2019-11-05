@@ -8,9 +8,9 @@ class ComposerStaticInitc3723045b3dc18d339eae4d9d1503d6e
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
-        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
@@ -42,15 +42,22 @@ class ComposerStaticInitc3723045b3dc18d339eae4d9d1503d6e
             'Symfony\\Polyfill\\Intl\\Idn\\' => 26,
             'Symfony\\Polyfill\\Ctype\\' => 23,
             'Symfony\\Contracts\\Translation\\' => 30,
+            'Symfony\\Contracts\\Service\\' => 26,
             'Symfony\\Contracts\\EventDispatcher\\' => 34,
             'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\Routing\\' => 26,
             'Symfony\\Component\\Mime\\' => 23,
             'Symfony\\Component\\HttpKernel\\' => 29,
             'Symfony\\Component\\HttpFoundation\\' => 33,
+            'Symfony\\Component\\Finder\\' => 25,
+            'Symfony\\Component\\Filesystem\\' => 29,
             'Symfony\\Component\\EventDispatcher\\' => 34,
             'Symfony\\Component\\ErrorRenderer\\' => 32,
             'Symfony\\Component\\ErrorHandler\\' => 31,
+            'Symfony\\Component\\DependencyInjection\\' => 38,
+            'Symfony\\Component\\Config\\' => 25,
+            'Symfony\\Component\\Asset\\' => 24,
+            'Services\\' => 9,
         ),
         'P' => 
         array (
@@ -70,9 +77,9 @@ class ComposerStaticInitc3723045b3dc18d339eae4d9d1503d6e
             'Illuminate\\Contracts\\' => 21,
             'Illuminate\\Container\\' => 21,
         ),
-        'F' => 
+        'G' => 
         array (
-            'Framework\\' => 10,
+            'Gregwar\\' => 8,
         ),
         'D' => 
         array (
@@ -137,6 +144,10 @@ class ComposerStaticInitc3723045b3dc18d339eae4d9d1503d6e
         array (
             0 => __DIR__ . '/..' . '/symfony/translation-contracts',
         ),
+        'Symfony\\Contracts\\Service\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/service-contracts',
+        ),
         'Symfony\\Contracts\\EventDispatcher\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/event-dispatcher-contracts',
@@ -161,6 +172,14 @@ class ComposerStaticInitc3723045b3dc18d339eae4d9d1503d6e
         array (
             0 => __DIR__ . '/..' . '/symfony/http-foundation',
         ),
+        'Symfony\\Component\\Finder\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/finder',
+        ),
+        'Symfony\\Component\\Filesystem\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/filesystem',
+        ),
         'Symfony\\Component\\EventDispatcher\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/event-dispatcher',
@@ -172,6 +191,22 @@ class ComposerStaticInitc3723045b3dc18d339eae4d9d1503d6e
         'Symfony\\Component\\ErrorHandler\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/error-handler',
+        ),
+        'Symfony\\Component\\DependencyInjection\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/dependency-injection',
+        ),
+        'Symfony\\Component\\Config\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/config',
+        ),
+        'Symfony\\Component\\Asset\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/asset',
+        ),
+        'Services\\' => 
+        array (
+            0 => '/App/Services',
         ),
         'Psr\\SimpleCache\\' => 
         array (
@@ -191,7 +226,7 @@ class ComposerStaticInitc3723045b3dc18d339eae4d9d1503d6e
         ),
         'Models\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/App/Http/Models',
+            0 => '/App/Http/Models',
         ),
         'Illuminate\\Support\\' => 
         array (
@@ -209,9 +244,9 @@ class ComposerStaticInitc3723045b3dc18d339eae4d9d1503d6e
         array (
             0 => __DIR__ . '/..' . '/illuminate/container',
         ),
-        'Framework\\' => 
+        'Gregwar\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/Framework',
+            0 => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar',
         ),
         'Doctrine\\Instantiator\\' => 
         array (
@@ -236,12 +271,18 @@ class ComposerStaticInitc3723045b3dc18d339eae4d9d1503d6e
     );
 
     public static $classMap = array (
-        'App\\Http\\Controllers\\AbstractController' => __DIR__ . '/../..' . '/App/Http/Controllers/AbstractController.php',
+        'App\\Helpers\\Auth' => __DIR__ . '/../..' . '/App/Helpers/Auth.php',
+        'App\\Helpers\\Csrf' => __DIR__ . '/../..' . '/App/Helpers/Csrf.php',
+        'App\\Helpers\\Validator' => __DIR__ . '/../..' . '/App/Helpers/Validator.php',
+        'App\\Http\\Controllers\\Api\\UserApiController' => __DIR__ . '/../..' . '/App/Http/Controllers/Api/UserApiController.php',
+        'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/App/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/App/Http/Controllers/UserController.php',
         'App\\Http\\Models\\User' => __DIR__ . '/../..' . '/App/Http/Models/User.php',
-        'App\\Http\\api\\Controller\\UserApiController' => __DIR__ . '/../..' . '/App/Http/Controllers/api/UserApiController.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/App/Kernel.php',
-        'App\\RouterHelper' => __DIR__ . '/../..' . '/App/Router.php',
+        'App\\Middleware\\Auth' => __DIR__ . '/../..' . '/App/Middleware/Auth.php',
+        'App\\Middleware\\CsrfToken' => __DIR__ . '/../..' . '/App/Middleware/CsrfToken.php',
+        'App\\Middleware\\Middleware' => __DIR__ . '/../..' . '/App/Middleware/Middleware.php',
+        'App\\Services\\Db' => __DIR__ . '/../..' . '/App/Services/Db.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert.php',
