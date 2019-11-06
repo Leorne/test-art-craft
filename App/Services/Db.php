@@ -29,11 +29,17 @@ class Db
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
-        ]);;
+        ]);
+        $this->capsule->setAsGlobal();
     }
 
     public function boot()
     {
         $this->capsule->bootEloquent();
+    }
+
+    public function createDatabase(){
+        $name = $this->config['DATABASE'];
+        $this->capsule->getConnection()->statement('CREATE DATABASE :name', ['name' => $name]);
     }
 }

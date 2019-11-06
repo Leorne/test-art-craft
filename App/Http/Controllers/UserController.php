@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Helpers\Auth;
 use App\Helpers\Validator;
 use App\Http\Models\User;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Symfony\Component\HttpFoundation\Cookie;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 
 class UserController extends Controller
@@ -107,7 +105,7 @@ class UserController extends Controller
             'photo' => $photoName,
             'key' => $key,
         ]);
-        $this->redirect('/');
+
         $response = new RedirectResponse('/');
         $response->headers->setCookie(Cookie::create('user', $key, strtotime('+1 year')));
         return $response;

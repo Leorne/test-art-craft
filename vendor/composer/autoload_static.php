@@ -65,6 +65,7 @@ class ComposerStaticInitc3723045b3dc18d339eae4d9d1503d6e
             'Psr\\Log\\' => 8,
             'Psr\\Container\\' => 14,
             'Prophecy\\' => 9,
+            'PHPMailer\\PHPMailer\\' => 20,
         ),
         'M' => 
         array (
@@ -224,6 +225,10 @@ class ComposerStaticInitc3723045b3dc18d339eae4d9d1503d6e
         array (
             0 => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy',
         ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
+        ),
         'Models\\' => 
         array (
             0 => '/App/Http/Models',
@@ -271,8 +276,10 @@ class ComposerStaticInitc3723045b3dc18d339eae4d9d1503d6e
     );
 
     public static $classMap = array (
+        'App\\Events\\ConfirmEmail' => __DIR__ . '/../..' . '/App/Events/ConfirmEmail.php',
         'App\\Helpers\\Auth' => __DIR__ . '/../..' . '/App/Helpers/Auth.php',
         'App\\Helpers\\Csrf' => __DIR__ . '/../..' . '/App/Helpers/Csrf.php',
+        'App\\Helpers\\Mailer' => __DIR__ . '/../..' . '/App/Services/Mailer.php',
         'App\\Helpers\\Validator' => __DIR__ . '/../..' . '/App/Helpers/Validator.php',
         'App\\Http\\Controllers\\Api\\UserApiController' => __DIR__ . '/../..' . '/App/Http/Controllers/Api/UserApiController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/App/Http/Controllers/Controller.php',

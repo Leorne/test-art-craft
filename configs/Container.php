@@ -2,6 +2,7 @@
 
 use App\Helpers\Auth;
 use App\Helpers\Csrf;
+use App\Helpers\Mailer;
 use App\Http\Controllers\Controller;
 use App\Services\Db;
 use Gregwar\Captcha\CaptchaBuilder;
@@ -38,6 +39,9 @@ $container->register('auth', Auth::class);
 
 //Database
 $container->register('db', Db::class);
+
+//Mailer
+$container->register('mailer', Mailer::class);
 
 //Captcha
 $container->register('captcha', CaptchaBuilder::class)

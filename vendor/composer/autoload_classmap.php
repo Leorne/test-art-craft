@@ -6,8 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Events\\ConfirmEmail' => $baseDir . '/App/Events/ConfirmEmail.php',
     'App\\Helpers\\Auth' => $baseDir . '/App/Helpers/Auth.php',
     'App\\Helpers\\Csrf' => $baseDir . '/App/Helpers/Csrf.php',
+    'App\\Helpers\\Mailer' => $baseDir . '/App/Services/Mailer.php',
     'App\\Helpers\\Validator' => $baseDir . '/App/Helpers/Validator.php',
     'App\\Http\\Controllers\\Api\\UserApiController' => $baseDir . '/App/Http/Controllers/Api/UserApiController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/App/Http/Controllers/Controller.php',
