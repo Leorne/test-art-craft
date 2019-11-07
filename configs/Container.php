@@ -3,6 +3,7 @@
 use App\Helpers\Auth;
 use App\Helpers\Csrf;
 use App\Helpers\Mailer;
+use App\Helpers\TwigHelper;
 use App\Http\Controllers\Controller;
 use App\Services\Db;
 use Gregwar\Captcha\CaptchaBuilder;
@@ -48,13 +49,15 @@ $container->register('captcha', CaptchaBuilder::class)
     ->addMethodCall('build');
 
 //Twig
+$container->register('twig.helper', TwigHelper::class);
 $container->register('twig.loader', FilesystemLoader::class)
     ->addArgument('../resources/view');
 $container->register('twig', Environment::class)
     ->addArgument(new Reference('twig.loader'))
     ->addMethodCall('addGlobal', ['session', new Reference('session')])
     ->addMethodCall('addGlobal', ['captcha', new Reference('captcha')])
-    ->addMethodCall('addGlobal', ['auth', new Reference('auth')]);
+    ->addMethodCall('addGlobal', ['auth', new Reference('auth')])
+    ->addMethodCall('addGlobal', ['helper', new Reference('twig.helper')]);
 
 //AbstractController
 $container->register('controller', Controller::class)
