@@ -9,7 +9,6 @@ class Auth
 {
     public function handle(ContainerBuilder $container){
         $auth = $container->get('auth');
-        var_dump($auth->isAuth());
         return $auth->isAuth() ? 200 : new RedirectResponse('/');
     }
 }
